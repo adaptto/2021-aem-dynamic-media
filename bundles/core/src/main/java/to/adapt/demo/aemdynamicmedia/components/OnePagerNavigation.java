@@ -3,6 +3,7 @@ package to.adapt.demo.aemdynamicmedia.components;
 import static com.day.cq.commons.jcr.JcrConstants.JCR_TITLE;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -45,7 +46,7 @@ public class OnePagerNavigation {
    * @return Navigation items
    */
   public List<NavigationItem> getItems() {
-    return this.items;
+    return Collections.unmodifiableList(this.items);
   }
 
   /**
