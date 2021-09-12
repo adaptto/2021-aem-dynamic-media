@@ -22,7 +22,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Content Container"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/apps/aemdynamicmediademo/core/components/content/portfolio,/apps/aemdynamicmediademo/core/components/content/services]">
+                        components="[/apps/aemdynamicmediademo/core/components/content/portfolio,/apps/aemdynamicmediademo/core/components/content/portfolioItem,/apps/aemdynamicmediademo/core/components/content/services]">
                         <jcr:content
                             jcr:primaryType="nt:unstructured"
                             jcr:mixinTypes="[cq:ReplicationStatus]"
@@ -143,6 +143,7 @@
                             wcmio:mediaResponsiveType="pictureSources"
                             actionsDisabled="true"
                             imageLinkHidden="true"
+                            showTitleType="false"
                             titleLinkHidden="true"
                             titleType="h4">
                             <jcr:content
@@ -167,6 +168,7 @@
                                     mediaFormat="square"
                                     widths="200,350,700?"/>
                             </wcmio:mediaRepsonsivePictureSources>
+                            <wcmio:mediaResponsiveImageSizes jcr:primaryType="nt:unstructured"/>
                         </responsive-with-different-ratios>
                     </portfolioItem>
                 </content>
