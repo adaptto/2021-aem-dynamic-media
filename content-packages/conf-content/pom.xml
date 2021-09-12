@@ -45,6 +45,7 @@
               <options>
                 <validRoots>
                   /conf/aemdynamicmediademo/settings,
+                  /conf/global/settings/dam/adminui-extension/imageprofile,
                   /conf
                 </validRoots>
               </options>

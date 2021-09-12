@@ -7,4 +7,5 @@
     <filter root="/conf/aemdynamicmediademo/settings/wcm">
         <exclude pattern="^.*/dam:thumbnails(/.*)?$"/>
     </filter>
+    <filter root="/conf/global/settings/dam/adminui-extension/imageprofile/smart-crop"/>
 </workspaceFilter>
