@@ -12,33 +12,12 @@
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
-            <header
-                jcr:description="&lt;p&gt;Welcome To Our Studio!&lt;/p&gt;&#xD;&#xA;"
-                jcr:primaryType="nt:unstructured"
-                jcr:title="Hello adaptTo() 2021"
-                sling:resourceType="aemdynamicmediademo/core/components/content/header"
-                actionsEnabled="true"
-                descriptionFromPage="false"
-                fileReference="/content/dam/aemdynamicmediademo/header/header-bg.jpg"
-                linkType="internal"
-                linkWindowTarget="_self"
-                textIsRich="true"
-                titleFromPage="false">
-                <actions jcr:primaryType="nt:unstructured">
-                    <item0
-                        jcr:primaryType="nt:unstructured"
-                        linkExternalRef="#services"
-                        linkType="external"
-                        linkWindowTarget="_self"
-                        text="Tell me more"/>
-                </actions>
-            </header>
             <content
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
                 <portfolio
                     jcr:primaryType="nt:unstructured"
-                    jcr:title="Portfolio"
+                    jcr:title="Hello adaptTo() 2021!"
                     sling:resourceType="aemdynamicmediademo/core/components/content/portfolio"
                     subHeading="Lorem ipsum dolor sit amet consectetur.">
                     <portfolioitem
