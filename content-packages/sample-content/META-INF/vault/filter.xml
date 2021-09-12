@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/dam/aemdynamicmediademo">
+        <!-- Exclude folder thumbnails - they will be generated automatically -->
+        <exclude pattern="^.*/jcr:content/folderThumbnail(/.*)?$"/>
+    </filter>
+    <filter root="/content/aemdynamicmediademo"/>
+    <filter root="/content/experience-fragments/aemdynamicmediademo"/>
+    <filter root="/conf/aemdynamicmediademo">
+        <include pattern="/conf/aemdynamicmediademo/.*"/>
+        <exclude pattern="/conf/aemdynamicmediademo/rep:policy(/.*)?"/>
+        <exclude pattern="/conf/aemdynamicmediademo/settings/wcm(/.*)?"/>
+    </filter>
+</workspaceFilter>

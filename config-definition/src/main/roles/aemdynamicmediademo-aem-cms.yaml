@@ -1,0 +1,97 @@
+# Project-specific AEM configuration
+
+# Inherit default AEM functionality from "AEM Definitions", see http://devops.wcm.io/conga/definitions/aem/
+inherits:
+- role: aem-cms
+
+variants:
+- variant: aem-author
+- variant: aem-publish
+
+templateDir: aemdynamicmediademo-aem-cms
+
+files:
+
+
+# AEM OSGi System Configuration
+- file: aemdynamicmediademo-aem-cms-config.provisioning
+  dir: packages
+  template: aemdynamicmediademo-aem-cms-config.provisioning.hbs
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    contentPackage:
+      name: aemdynamicmediademo-aem-cms-config
+      rootPath: /apps/aemdynamicmediademo/config
+      filters:
+      - filter: /apps/aemdynamicmediademo
+        rules:
+        - rule: include
+          pattern: /apps/aemdynamicmediademo/config(\..*)?(/.*)?
+        - rule: exclude
+          pattern: /apps/aemdynamicmediademo/config/rewriter(/.*)?
+
+# Include URL handler in Sling Rewriter configuration
+- file: aemdynamicmediademo-aem-cms-rewriter-config.json
+  dir: packages
+  template: aemdynamicmediademo-aem-cms-rewriter-config.json.hbs
+  validatorOptions:
+    contentPackage.validatorsSettings:
+      jackrabbit-filter:
+        options:
+          validRoots: /apps/aemdynamicmediademo/config
+  postProcessors:
+  - aem-contentpackage
+  postProcessorOptions:
+    contentPackage:
+      name: aemdynamicmediademo-aem-cms-rewriter-config
+      packageType: application
+      acHandling: merge
+      rootPath: /apps/aemdynamicmediademo/config/rewriter
+
+# wcm.io
+- url: mvn:io.wcm/io.wcm.handler.url//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.handler.link//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.handler.media//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.handler.richtext//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.wcm.core.components//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.wcm.parsys//zip/content
+  dir: packages
+- url: mvn:io.wcm/io.wcm.wcm.ui.granite//zip/content
+  dir: packages
+
+# Application package
+- url: mvn:to.adapt.demo/to.adapt.demo.aemdynamicmedia.complete//zip
+  dir: packages
+- url: mvn:to.adapt.demo/to.adapt.demo.aemdynamicmedia.ui.apps//zip
+  dir: packages
+
+# Application conf content package
+- url: mvn:to.adapt.demo/to.adapt.demo.aemdynamicmedia.conf-content//zip
+  dir: packages
+  condition: ${app.confContent}
+
+# Application sample content package
+- url: mvn:to.adapt.demo/to.adapt.demo.aemdynamicmedia.sample-content//zip
+  dir: packages
+  condition: ${app.sampleContent}
+
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: adaptto-demo
+    version: ${version}
+
+  app:
+    confContent: true
+    sampleContent: false
+
+  # Log levels
+  log:
+    projectSpecificLogLevel: warn
