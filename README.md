@@ -37,8 +37,6 @@ You can deploy individual bundles or content packages to the local AEM instances
 * AEM cloud author instance running on port 4502
 * Optional: AEM cloud publish instance running on port 4503
 
-It is recommended to set up the local AEM instances with `nosamplecontent` run mode.
-
 
 ### Project overview
 
@@ -49,7 +47,6 @@ Modules of this project:
 * [content-packages/ui.apps](content-packages/ui.apps/): AEM content package containing:
   * AEM components with their scripts and dialog definitions
   * HTML client libraries with JavaScript and CSS
-  * i18n
 * [content-packages/complete](content-packages/complete/): AEM content package containing all OSGi bundles of the application and their dependencies
 * [content-packages/conf-content](content-packages/conf-content/): AEM content package with editable templates stored at `/conf`
 * [content-packages/sample-content](content-packages/sample-content/): AEM content package containing sample content (for development and test purposes)
