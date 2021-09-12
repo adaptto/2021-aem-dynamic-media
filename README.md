@@ -1,7 +1,8 @@
-aemdynamicmediademo
-===================
+adaptTo() 2021 - Dynamic Media Support in wcm.io Media Handler
+==============================================================
 
-This is an AEM project set up with the [wcm.io Maven Archetype for AEM][wcmio-maven-archetype-aem].
+Demo code for talk at adaptTo() 2021:<br/>
+https://adapt.to/2021/en/schedule/dynamic-media-support-in-wcm-io-media-handler.html
 
 
 ### Build and deploy

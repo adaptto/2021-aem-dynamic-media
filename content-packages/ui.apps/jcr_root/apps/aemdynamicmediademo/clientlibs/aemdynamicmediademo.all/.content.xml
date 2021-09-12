@@ -2,6 +2,6 @@
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:ClientLibraryFolder"
     categories="[aemdynamicmediademo.all]"
-    embed="[core.wcm.components.commons.datalayer.v1,core.wcm.components.commons.site.container,core.wcm.components.carousel.v1,core.wcm.components.tabs.v1,core.wcm.components.accordion.v1,aemdynamicmediademo.3rdparty,aemdynamicmediademo.app]"
+    embed="[aemdynamicmediademo.vendor.jquery,aemdynamicmediademo.vendor.jquery-easing,aemdynamicmediademo.vendor.bootstrap,aemdynamicmediademo.vendor.fontawesome-free,aemdynamicmediademo.app]"
     jsProcessor="[default:none,min:gcc;compilationLevel=whitespace]"
     allowProxy="{Boolean}true"/>

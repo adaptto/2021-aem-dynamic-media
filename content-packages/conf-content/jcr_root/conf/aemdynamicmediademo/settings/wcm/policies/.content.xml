@@ -1,68 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:wcmio="http://wcm.io/ns" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
     jcr:mixinTypes="[rep:AccessControllable]"
     jcr:primaryType="cq:Page">
     <rep:policy/>
+    <wcm jcr:primaryType="nt:unstructured">
+        <foundation jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <root-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Root Container"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/aemdynamicmediademo/core/components/content/header,/apps/aemdynamicmediademo/core/components/content/title]">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
+                            cq:lastReplicationAction="Activate"/>
+                    </root-container>
+                    <content-container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content Container"
+                        sling:resourceType="wcm/core/components/policy/policy"
+                        components="[/apps/aemdynamicmediademo/core/components/content/portfolio,/apps/aemdynamicmediademo/core/components/content/portfolioItem,/apps/aemdynamicmediademo/core/components/content/services]">
+                        <jcr:content
+                            jcr:primaryType="nt:unstructured"
+                            jcr:mixinTypes="[cq:ReplicationStatus]"
+                            cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
+                            cq:lastReplicationAction="Activate"/>
+                        <cq:authoring jcr:primaryType="nt:unstructured">
+                            <assetToComponentMapping jcr:primaryType="nt:unstructured"/>
+                        </cq:authoring>
+                    </content-container>
+                </responsivegrid>
+            </components>
+        </foundation>
+    </wcm>
     <aemdynamicmediademo jcr:primaryType="nt:unstructured">
         <core jcr:primaryType="nt:unstructured">
             <components jcr:primaryType="nt:unstructured">
-                <container jcr:primaryType="nt:unstructured">
-                    <container jcr:primaryType="nt:unstructured">
-                        <root-container
+                <content jcr:primaryType="nt:unstructured">
+                    <services jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Root Container"
+                            jcr:title="Default"
                             sling:resourceType="wcm/core/components/policy/policy"
-                            components="[/apps/aemdynamicmediademo/core/components/container/container,group:aemdynamicmediademo Templating]">
+                            components="[/apps/aemdynamicmediademo/core/components/content/servicesItem,/apps/aemdynamicmediademo/core/components/content/servicesLinkList]">
                             <jcr:content
                                 jcr:primaryType="nt:unstructured"
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
                                 cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
                                 cq:lastReplicationAction="Activate"/>
-                        </root-container>
-                        <experience-fragment
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Background"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="bg-light"
+                                            cq:styleId="1563879048542"
+                                            cq:styleLabel="Light"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="bg-dark"
+                                            cq:styleId="1563879049591"
+                                            cq:styleLabel="Dark"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </default>
+                    </services>
+                    <servicesLinkList jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Experience Fragment"
+                            jcr:title="Default"
                             sling:resourceType="wcm/core/components/policy/policy"
-                            components="[group:aemdynamicmediademo Container,group:aemdynamicmediademo Content]">
+                            components="/apps/aemdynamicmediademo/core/components/content/servicesLinkListItem">
                             <jcr:content
                                 jcr:primaryType="nt:unstructured"
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
                                 cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
                                 cq:lastReplicationAction="Activate"/>
-                            <cq:authoring jcr:primaryType="nt:unstructured">
-                                <assetToComponentMapping jcr:primaryType="nt:unstructured">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        assetGroup="media"
-                                        assetMimetype="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                        droptarget="image"
-                                        resourceType="aemdynamicmediademo/core/components/content/responsiveimage"/>
-                                </assetToComponentMapping>
-                            </cq:authoring>
-                        </experience-fragment>
-                        <content-container
+                        </default>
+                    </servicesLinkList>
+                    <portfolio jcr:primaryType="nt:unstructured">
+                        <default
                             jcr:primaryType="nt:unstructured"
-                            jcr:title="Content Container"
+                            jcr:title="Default"
                             sling:resourceType="wcm/core/components/policy/policy"
-                            components="[group:aemdynamicmediademo Container,group:aemdynamicmediademo Content]">
+                            components="/apps/aemdynamicmediademo/core/components/content/portfolioItem">
                             <jcr:content
                                 jcr:primaryType="nt:unstructured"
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
                                 cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
                                 cq:lastReplicationAction="Activate"/>
-                            <cq:authoring jcr:primaryType="nt:unstructured">
-                                <assetToComponentMapping jcr:primaryType="nt:unstructured">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        assetGroup="media"
-                                        assetMimetype="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                        droptarget="image"
-                                        resourceType="aemdynamicmediademo/core/components/content/responsiveimage"/>
-                                </assetToComponentMapping>
-                            </cq:authoring>
-                        </content-container>
-                    </container>
-                </container>
+                            <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                <item0
+                                    cq:styleGroupLabel="Background"
+                                    jcr:primaryType="nt:unstructured">
+                                    <cq:styles jcr:primaryType="nt:unstructured">
+                                        <item0
+                                            cq:styleClasses="bg-light"
+                                            cq:styleId="1563879173260"
+                                            cq:styleLabel="Light"
+                                            jcr:primaryType="nt:unstructured"/>
+                                        <item1
+                                            cq:styleClasses="bg-dark"
+                                            cq:styleId="1563879174202"
+                                            cq:styleLabel="Dark"
+                                            jcr:primaryType="nt:unstructured"/>
+                                    </cq:styles>
+                                </item0>
+                            </cq:styleGroups>
+                        </default>
+                    </portfolio>
+                    <portfolioItem jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            wcmio:mediaCropAuto="{Boolean}true"
+                            wcmio:mediaFormats="square"
+                            wcmio:mediaResponsiveType="none"
+                            actionsDisabled="true"
+                            imageLinkHidden="true"
+                            titleLinkHidden="true"
+                            titleType="h4">
+                            <jcr:content
+                                jcr:primaryType="nt:unstructured"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
+                                cq:lastReplicationAction="Activate"/>
+                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                        </default>
+                        <responsive-with-different-ratios
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Responsive with different Ratios"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            wcmio:mediaCropAuto="{Boolean}true"
+                            wcmio:mediaFormats="square"
+                            wcmio:mediaResponsiveType="pictureSources"
+                            actionsDisabled="true"
+                            imageLinkHidden="true"
+                            titleLinkHidden="true"
+                            titleType="h4">
+                            <jcr:content
+                                jcr:primaryType="nt:unstructured"
+                                jcr:mixinTypes="[cq:ReplicationStatus]"
+                                cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
+                                cq:lastReplicationAction="Activate"/>
+                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaRepsonsivePictureSources jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    media="(min-width: 1200px)"
+                                    mediaFormat="extra_wide"
+                                    widths="200,350,700?"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    media="(min-width: 768px)"
+                                    mediaFormat="landscape"
+                                    widths="200,350,700?"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    mediaFormat="square"
+                                    widths="200,350,700?"/>
+                            </wcmio:mediaRepsonsivePictureSources>
+                        </responsive-with-different-ratios>
+                    </portfolioItem>
+                </content>
             </components>
         </core>
     </aemdynamicmediademo>
