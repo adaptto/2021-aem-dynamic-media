@@ -22,7 +22,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="Content Container"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/apps/aemdynamicmediademo/core/components/content/portfolio,/apps/aemdynamicmediademo/core/components/content/portfolioItem,/apps/aemdynamicmediademo/core/components/content/services]">
+                        components="[/apps/aemdynamicmediademo/core/components/content/portfolio,/apps/aemdynamicmediademo/core/components/content/portfolioItem,/apps/aemdynamicmediademo/core/components/content/services,group:Dynamic Media]">
                         <jcr:content
                             jcr:primaryType="nt:unstructured"
                             jcr:mixinTypes="[cq:ReplicationStatus]"
