@@ -46,6 +46,7 @@
                 <validRoots>
                   /conf/aemdynamicmediademo/settings,
                   /conf/global/settings/dam/adminui-extension/imageprofile,
+                  /conf/global/settings/dam/dm/presets/macros,
                   /conf
                 </validRoots>
               </options>

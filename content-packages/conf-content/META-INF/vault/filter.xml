@@ -8,4 +8,5 @@
         <exclude pattern="^.*/dam:thumbnails(/.*)?$"/>
     </filter>
     <filter root="/conf/global/settings/dam/adminui-extension/imageprofile/smart-crop"/>
+    <filter root="/conf/global/settings/dam/dm/presets/macros/800-Grayscale"/>
 </workspaceFilter>
