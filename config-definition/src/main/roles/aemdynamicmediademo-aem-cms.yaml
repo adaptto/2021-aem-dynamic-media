@@ -46,7 +46,6 @@ files:
     contentPackage:
       name: aemdynamicmediademo-aem-cms-rewriter-config
       packageType: application
-      acHandling: merge
       rootPath: /apps/aemdynamicmediademo/config/rewriter
 
 # wcm.io
