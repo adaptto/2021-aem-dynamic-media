@@ -132,7 +132,7 @@
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
                                 cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
                                 cq:lastReplicationAction="Activate"/>
-                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaResponsiveImageSizes jcr:primaryType="nt:unstructured"/>
                         </default>
                         <responsive-with-different-ratios
                             jcr:primaryType="nt:unstructured"
@@ -151,8 +151,8 @@
                                 jcr:mixinTypes="[cq:ReplicationStatus]"
                                 cq:lastReplicated="{Date}2021-09-12T00:00:00.000+02:00"
                                 cq:lastReplicationAction="Activate"/>
-                            <wcmio:mediaRepsonsiveImageSizes jcr:primaryType="nt:unstructured"/>
-                            <wcmio:mediaRepsonsivePictureSources jcr:primaryType="nt:unstructured">
+                            <wcmio:mediaResponsiveImageSizes jcr:primaryType="nt:unstructured"/>
+                            <wcmio:mediaResponsivePictureSources jcr:primaryType="nt:unstructured">
                                 <item0
                                     jcr:primaryType="nt:unstructured"
                                     media="(min-width: 1200px)"
@@ -167,7 +167,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     mediaFormat="square"
                                     widths="200,350,700?"/>
-                            </wcmio:mediaRepsonsivePictureSources>
+                            </wcmio:mediaResponsivePictureSources>
                             <wcmio:mediaResponsiveImageSizes jcr:primaryType="nt:unstructured"/>
                         </responsive-with-different-ratios>
                     </portfolioItem>

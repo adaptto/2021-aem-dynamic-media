@@ -6,5 +6,5 @@
     sling:resourceSuperType="wcm-io/wcm/core/components/teaser/v1/teaser">
     <cq:htmlTag
         jcr:primaryType="nt:unstructured"
-        class="col-md-4 col-sm-6 portfolio-item"/>
+        class="col-md-6 col-sm-6 portfolio-item"/>
 </jcr:root>
