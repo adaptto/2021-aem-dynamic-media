@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="nt:unstructured"
-    banner="square,500,500|landscape,480,270|wide,500,250|extra_wide,480,150|portrait,250,500"
+    banner="square,1000,1000|landscape,960,540|wide,1000,500|extra_wide,960,300|portrait,500,1000"
     crop_type="crop_smart"
     swatch=""
     usmAmount="1.75"

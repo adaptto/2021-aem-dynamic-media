@@ -5,6 +5,16 @@ Demo code for talk at adaptTo() 2021:<br/>
 https://adapt.to/2021/en/schedule/dynamic-media-support-in-wcm-io-media-handler.html
 
 
+### Configure Dynamic Media
+
+
+Before you actually deploy the demo application, configure dynamic media in the AEMaaCS SDK Author instance:
+
+* Go to Tools > Cloud Services > Dynamic Media Configuration
+* Create a new configuration in the "global" folder
+* Provide valid Dynamic Media credentials
+
+
 ### Build and deploy
 
 To build the application run
