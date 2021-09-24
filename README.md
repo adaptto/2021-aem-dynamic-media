@@ -44,8 +44,8 @@ You can deploy individual bundles or content packages to the local AEM instances
 
 * Java 11
 * Apache Maven 3.6.0 or higher
-* AEM cloud author instance running on port 4502
-* Optional: AEM cloud publish instance running on port 4503
+* AEMaaCS SDK author instance running on port 4502
+* Optional: AEMaaCS SDK publish instance running on port 4503
 
 
 ### Project overview
