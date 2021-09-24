@@ -5,7 +5,7 @@
         cq:templateType="/conf/aemdynamicmediademo/settings/wcm/template-types/content"
         jcr:primaryType="cq:PageContent"
         jcr:title="aemdynamicmediademo Homepage"
-        allowedPaths="^/content/aemdynamicmediademo(/.+)?$"
+        allowedPaths="^/content/aemdynamicmediademo$"
         ranking="{Long}20"
         status="enabled"
         jcr:mixinTypes="[cq:ReplicationStatus]"

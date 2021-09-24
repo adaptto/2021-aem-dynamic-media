@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/aemdynamicmediademo/settings/wcm/templates/contentpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="OOTB Dynamic Media"
+        sling:resourceType="aemdynamicmediademo/core/components/global/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <title
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aemdynamicmediademo/core/components/content/title"/>
+            <content
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <dynamicmedia
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="dam/components/scene7/dynamicmedia"
+                    assetID="DynamicMediaNA/kalen-emsley-Bkci_8qcdvQ-unsplash"
+                    assetType="Image"
+                    breakpoints=""
+                    fileReference="/content/dam/aemdynamicmediademo/content/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"
+                    imageServerUrl="https://smartimaging.scene7.com/is/image/"
+                    imageserverurl="https://smartimaging.scene7.com/is/image/"
+                    linkTarget="_self"
+                    s7ImagePreset=""
+                    s7PresetType="viewer"
+                    s7ViewerPreset="/conf/global/settings/dam/dm/presets/viewer/Zoom_dark|ZOOM|false"
+                    s7ViewerPresetPath="/DynamicMediaNA/Zoom_dark|ZOOM|false"
+                    urlModifiers=""
+                    videoserverurl="https://smartimaging.scene7.com/is/content/"
+                    viewerPath="https://smartimaging.scene7.com/s7viewers/"/>
+            </content>
+        </root>
+        <cq:featuredimage jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

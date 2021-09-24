@@ -5,7 +5,7 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.aem-global-parent</artifactId>
-    <version>1.5.8</version>
+    <version>1.15.10</version>
     <relativePath/>
   </parent>
 
@@ -30,6 +30,10 @@
 
     <!-- Enable reproducible builds -->
     <project.build.outputTimestamp>2021-01-01T00:00:00Z</project.build.outputTimestamp>
+
+    <!-- Versions -->
+    <core.wcm.components.version>2.17.10</core.wcm.components.version>
+    <wcmio.wcm.components.version>1.9.0-2.17.2</wcmio.wcm.components.version>
 
   </properties>
 
@@ -159,14 +163,14 @@
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.core.components</artifactId>
-        <version>1.9.0-2.17.2</version>
+        <version>${wcmio.wcm.components.version}</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.wcm.core.components</artifactId>
         <classifier>content</classifier>
         <type>zip</type>
-        <version>1.9.0-2.17.2</version>
+        <version>${wcmio.wcm.components.version}</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -200,14 +204,14 @@
       <dependency>
         <groupId>io.wcm.devops.conga.definitions</groupId>
         <artifactId>io.wcm.devops.conga.definitions.aem</artifactId>
-        <version>1.10.0</version>
+        <version>1.11.0</version>
       </dependency>
 
       <!-- wcm.io Testing -->
       <dependency>
         <groupId>io.wcm</groupId>
         <artifactId>io.wcm.testing.aem-mock.junit5</artifactId>
-        <version>4.1.2</version>
+        <version>4.1.4</version>
       </dependency>
       <dependency>
         <groupId>io.wcm</groupId>
@@ -266,6 +270,38 @@
         <groupId>org.mockito</groupId>
         <artifactId>mockito-junit-jupiter</artifactId>
         <version>3.10.0</version>
+      </dependency>
+
+      <!-- Core Components Examples -->
+      <dependency>
+        <groupId>com.adobe.cq</groupId>
+        <artifactId>core.wcm.components.examples.ui.config</artifactId>
+        <version>${core.wcm.components.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.cq</groupId>
+        <artifactId>core.wcm.components.examples.ui.apps</artifactId>
+        <version>${core.wcm.components.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>com.adobe.cq</groupId>
+        <artifactId>core.wcm.components.examples.ui.content</artifactId>
+        <version>${core.wcm.components.version}</version>
+        <type>zip</type>
+      </dependency>
+      <dependency>
+        <groupId>io.wcm.samples</groupId>
+        <artifactId>io.wcm.wcm.core.components.examples</artifactId>
+        <type>zip</type>
+        <version>${wcmio.wcm.components.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.wcm.samples</groupId>
+        <artifactId>io.wcm.wcm.core.components.examples-sample-content</artifactId>
+        <type>zip</type>
+        <version>${wcmio.wcm.components.version}</version>
       </dependency>
 
     </dependencies>

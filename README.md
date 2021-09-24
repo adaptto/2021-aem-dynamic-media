@@ -1,7 +1,18 @@
-aemdynamicmediademo
-===================
+adaptTo() 2021 - Dynamic Media Support in wcm.io Media Handler
+==============================================================
 
-This is an AEM project set up with the [wcm.io Maven Archetype for AEM][wcmio-maven-archetype-aem].
+Demo code for talk at adaptTo() 2021:<br/>
+https://adapt.to/2021/en/schedule/dynamic-media-support-in-wcm-io-media-handler.html
+
+
+### Configure Dynamic Media
+
+
+Before you actually deploy the demo application, configure dynamic media in the AEMaaCS SDK Author instance:
+
+* Go to Tools > Cloud Services > Dynamic Media Configuration
+* Create a new configuration in the "global" folder
+* Provide valid Dynamic Media credentials
 
 
 ### Build and deploy
@@ -36,8 +47,6 @@ You can deploy individual bundles or content packages to the local AEM instances
 * AEM cloud author instance running on port 4502
 * Optional: AEM cloud publish instance running on port 4503
 
-It is recommended to set up the local AEM instances with `nosamplecontent` run mode.
-
 
 ### Project overview
 
@@ -48,7 +57,6 @@ Modules of this project:
 * [content-packages/ui.apps](content-packages/ui.apps/): AEM content package containing:
   * AEM components with their scripts and dialog definitions
   * HTML client libraries with JavaScript and CSS
-  * i18n
 * [content-packages/complete](content-packages/complete/): AEM content package containing all OSGi bundles of the application and their dependencies
 * [content-packages/conf-content](content-packages/conf-content/): AEM content package with editable templates stored at `/conf`
 * [content-packages/sample-content](content-packages/sample-content/): AEM content package containing sample content (for development and test purposes)

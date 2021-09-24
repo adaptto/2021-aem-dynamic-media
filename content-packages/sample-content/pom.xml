@@ -78,6 +78,25 @@
       </plugin>
 
     </plugins>
+    <pluginManagement>
+      <plugins>
+      
+        <plugin>
+          <groupId>io.wcm.maven.plugins</groupId>
+          <artifactId>wcmio-content-package-maven-plugin</artifactId>
+          <configuration>
+            <excludeProperties combine.children="append">
+              <!-- Exclude all properties for scene7, they have a "hard-coded" the scene7 catalog/tenant -->
+              <exclude>dam\:scene7.*</exclude>
+              <exclude>dam\:imageServerAsset</exclude>
+              <exclude>dam\:s7damType</exclude>
+              <exclude>status</exclude>
+            </excludeProperties>
+          </configuration>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
   </build>
 
 </project>
